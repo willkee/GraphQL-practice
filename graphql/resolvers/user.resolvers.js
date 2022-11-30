@@ -1,7 +1,11 @@
-const userModel = require("../models/user.model");
+const { getAllUsers, addNewCustomer } = require("../models/user.model");
 
 module.exports = {
 	Query: {
-		users: () => userModel.getAllUsers(),
+		users: () => getAllUsers(),
+	},
+	Mutation: {
+		newCustomer: (_, { firstName, lastName, email, password }) =>
+			addNewCustomer(firstName, lastName, email, password),
 	},
 };

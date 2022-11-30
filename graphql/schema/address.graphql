@@ -1,5 +1,5 @@
 type Query {
-	addressesByUserId: [Address]
+	addressesByUserId(userId: Int!): [Address]
 }
 
 type Address {
