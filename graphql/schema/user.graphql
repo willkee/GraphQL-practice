@@ -2,6 +2,15 @@ type Query {
 	users: [User]
 }
 
+type Mutation {
+	newCustomer(
+		firstName: String!
+		lastName: String!
+		email: String!
+		password: String!
+	): User
+}
+
 type User {
 	id: Int!
 	firstName: String!
